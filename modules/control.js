@@ -76,6 +76,10 @@
           killEvent(ev);
           config("show_message", !config("show_message"));
           break;
+        case 8: // Backspace
+          killEvent(ev);
+          jetzt.view.reader.toggleMirror();
+          break;
       }
 
     });

@@ -178,6 +178,13 @@
       message.style.fontFamily = font;
     };
 
+    this.toggleMirror = function(shouldEnable) {
+      var mirrorClass = "sr-mirrored";
+      shouldEnable = shouldEnable === undefined ? (! H.hasClass(box, mirrorClass)) : shouldEnable;
+      var toggleClass = (shouldEnable ? H.addClass : H.removeClass).bind(H);
+      toggleClass(box, mirrorClass);
+    };
+
     this.setFontWeight = function (fontWeight) {
       leftWord.style.fontWeight = fontWeight;
       pivotChar.style.fontWeight = fontWeight;

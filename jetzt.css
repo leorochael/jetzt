@@ -177,3 +177,7 @@
 .sr-pointer {
   cursor: pointer;
 }
+
+.sr-mirrored {
+	transform: scale(-1, 1);
+}
